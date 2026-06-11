@@ -1,6 +1,6 @@
 ---
 name: discipline
-description: Full-rigor mode for a high-stakes workstream — a PHASE-AWARE conductor over the discipline stack. It does NOT recite every gate at once; it fires the right one at each phase and lets none be skipped. DESIGN: substrate-search → think-3x (carrying karsholto + adversarial-inverse-for-mechanisms as lenses). VERIFY: the triad (.95 + root-cause + karsholto) → completer → nomess → vizcheck (UI only) → adversarial pass. Trigger: "discipline" / "full rigor", or proactively for any high-stakes build (money movement, irreversible/outward-facing change, new substrate).
+description: Full-rigor mode for a high-stakes workstream — a PHASE-AWARE conductor over the discipline stack. It does NOT recite every gate at once; it fires the right one at each phase and lets none be skipped. DESIGN: substrate-search → think-3x (carrying karsholto + adversarial-inverse-for-mechanisms as lenses). VERIFY: the triad (.95 + root-cause + karsholto) → nomess → vizcheck (UI only) → adversarial pass. Trigger: "discipline" / "full rigor", or proactively for any high-stakes build (money movement, irreversible/outward-facing change, new substrate).
 ---
 
 # Discipline — the full-rigor conductor
@@ -41,18 +41,12 @@ commitment to the other phase. Most work passes through both in order.
      "are you sure?" with posterior + evidence, not a feeling.
    - **root-cause** — fix the root, not the symptom; a verified
      symptom-patch is still a symptom-patch.
-4. **completer** — about to claim done-with-residue, or write
-   "follow-up / next session / separate pass / deferred"? Classify the
-   remaining work: a GENUINE blocker (data/decision/access you lack, or a
-   distinct NEW build) → name it + what unblocks it; or stopping-short
-   ("it's big" / "end of session" — cop-outs) → finish it now. The user
-   outcome is the WHOLE job.
-5. **nomess** — semantic orphans, dead symlinks, untracked files, stale
+4. **nomess** — semantic orphans, dead symlinks, untracked files, stale
    gates, doc-vs-runtime drift, end-to-end smoke gap.
-6. **vizcheck** — UI/CSS/layout change? Verify the visual achieved its
+5. **vizcheck** — UI/CSS/layout change? Verify the visual achieved its
    intent in its rendered form — read the pixels, escalate to coordinate
    readback for exact placement. Syntax checks don't substitute.
-7. **adversarial-pass** — the author can't be the only reviewer.
+6. **adversarial-pass** — the author can't be the only reviewer.
    Live-fire the user-outcome path (repeatedly for nondeterministic
    surfaces); for high-stakes work, spawn the `refuter` agent to
    REFUTE the claim, not bless it. This EARNS the .95 posterior rather
@@ -78,7 +72,7 @@ DESIGN:  substrate-search → think-3x ─┬─ karsholto (lens)
                                       └─ adversarial-inverse (lens; mechanisms only)
                    │  build the synthesis
                    ▼
-VERIFY:  triad(.95 + root-cause + karsholto) → completer → nomess → vizcheck(UI) → adversarial-pass(→ refuter agent)
+VERIFY:  triad(.95 + root-cause + karsholto) → nomess → vizcheck(UI) → adversarial-pass(→ refuter agent)
 ```
 
 ## One-line summary
