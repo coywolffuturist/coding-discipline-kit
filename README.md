@@ -13,7 +13,7 @@ unverified, gets a second opinion before "done," and is structurally prevented
 from leaking secrets.
 
 This is the **coding-focused** kit. There's a sibling for non-technical
-knowledge work — see *Overlap* below.
+knowledge work — see *Companion kit* below.
 
 ## What's inside
 
@@ -90,18 +90,13 @@ invoke any by name); the hooks run on every matching tool call.
 > Requires `jq` for the guard hooks. The secret scan uses `gitleaks` if present,
 > otherwise the bundled `secret-patterns.txt`.
 
-## Overlap with the knowledge-work kit
+## Companion kit (for non-coding work)
 
-There's a sibling kit, **agent-discipline-kit**, that generalizes these same
-disciplines for non-coding work (decks, legal, accounting, marketing). Most
-skills are renamed there (e.g. `substrate-search` → `reuse-first`,
-`vizcheck` → `final-form-check`), but **five names are shared** by both kits:
-`root-cause`, `think-3x`, `discipline`, `grill-me`, and the `refuter` agent.
-
-If you install **both** kits on one machine, those five will collide — the
-second `cp` wins. They're the *same discipline* in both, so keep one copy. If
-you want both kits cleanly side-by-side, package them as Claude Code plugins
-(which namespace skills) instead of copying into `~/.claude/`.
+There's a sibling kit, **agent-discipline-kit**, with the same disciplines
+generalized for non-technical knowledge work (decks, legal, accounting,
+marketing, research). Every skill name differs between the two kits **on
+purpose** — so you can install both on one machine with **zero collisions**.
+Copy both into `~/.claude/` and they coexist cleanly.
 
 ## The one idea behind all of it
 
