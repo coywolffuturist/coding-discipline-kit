@@ -29,6 +29,11 @@ It then runs free, fast, and identically every time.
 - **Judgment-laden** — taste, ambiguity, the human's call.
 - **Fast-changing rules** — compiling now is premature and brittle.
 - **Unevaluable** — you can't measure correct, so you'd compile slop.
+- **It embeds a human gate.** A deliberate checkpoint the human must own — what
+  goes public, money movement, an irreversible or outward-facing decision. Even
+  when the surrounding steps are mechanical, do NOT compile the gate away: the
+  friction is the feature — it forces the human pause. Compile the grunt-work
+  *after* the gate clears, never the gate itself.
 
 ## Timing
 
