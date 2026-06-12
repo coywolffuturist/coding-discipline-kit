@@ -41,6 +41,18 @@ Crystallize on the **2nd–3rd repeat, never the 1st.** Build the eval first
 (karsholto), prove the procedure, then compile. Premature hard code is worse
 than re-reasoning — you ship the wrong procedure, and now it's a landmine.
 
+## Auditing a system for candidates
+
+Scanning a codebase, a set of crons, or your own session work for what to compile:
+- **Inventory the recurring procedures** — scheduled jobs, loops, and the steps
+  *you re-derive by hand each session* (the richest seam — well-written automated
+  code is usually already split right: mechanical in code, model for judgment).
+- **Score each** against the four identifiers + the guards above; **rank by
+  leverage** (heaviest token-spend first, don't boil the ocean); **name each
+  candidate's eval** before compiling.
+- **Don't manufacture candidates.** "Already disciplined" is a valid, valuable
+  result — and never compile a human gate just because the steps around it are mechanical.
+
 ## One line
 
 Agents think once; code does forever. Re-deriving mechanical, stable, checkable
