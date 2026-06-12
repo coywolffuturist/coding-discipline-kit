@@ -1,6 +1,6 @@
 ---
 name: discipline
-description: Full-rigor mode for a high-stakes workstream — a PHASE-AWARE conductor over the discipline stack. It does NOT recite every gate at once; it fires the right one at each phase and lets none be skipped. DESIGN: substrate-search → think-3x (carrying karsholto + adversarial-inverse-for-mechanisms as lenses). VERIFY: the triad (.95 + root-cause + karsholto) → completer → nomess → vizcheck (UI only) → adversarial pass. Trigger: "discipline" / "full rigor", or proactively for any high-stakes build (money movement, irreversible/outward-facing change, new substrate).
+description: Full-rigor mode for a high-stakes workstream — a PHASE-AWARE conductor over the discipline stack. It does NOT recite every gate at once; it fires the right one at each phase and lets none be skipped. DESIGN: substrate-search → compile-it → think-3x (carrying karsholto + adversarial-inverse-for-mechanisms as lenses). VERIFY: the triad (.95 + root-cause + karsholto) → completer → nomess → cold-read → vizcheck (UI only) → adversarial pass. Trigger: "discipline" / "full rigor", or proactively for any high-stakes build (money movement, irreversible/outward-facing change, new substrate).
 ---
 
 # Discipline — the full-rigor conductor
@@ -22,7 +22,11 @@ commitment to the other phase. Most work passes through both in order.
    endpoint / daemon / abstraction / layer)? Answer in writing FIRST:
    *"what existing piece is insufficient?"* Prefer reusing a validated
    component.
-2. **think-3x** — Think 1 (best idea) → Think 2 (red-team) → Think 3
+2. **compile-it** — before designing an LLM build, ask: should this be
+   deterministic CODE instead? If it repeats + is mechanical + stable +
+   checkable, write the hard code (agents think, code does). Crystallize on
+   the 2nd–3rd repeat, not the 1st.
+3. **think-3x** — Think 1 (best idea) → Think 2 (red-team) → Think 3
    (synthesis); build the synthesis, not Think 1. Show all three before
    code. Think 2 carries two lenses:
    - **karsholto** — smallest brick that proves the wall; eval-driven;
@@ -35,24 +39,29 @@ commitment to the other phase. Most work passes through both in order.
 
 ### VERIFY — before claiming "done / ready / deployed / clean / it works"
 
-3. **The triad — .95 + root-cause + karsholto** (always fire together):
+4. **The triad — .95 + root-cause + karsholto** (always fire together):
    - **.95** — define the user-outcome ONCE, set a prior, update the
      posterior with real cycles; don't claim ready below P≥0.95; answer
      "are you sure?" with posterior + evidence, not a feeling.
    - **root-cause** — fix the root, not the symptom; a verified
      symptom-patch is still a symptom-patch.
-4. **completer** — about to claim done-with-residue, or write
+5. **completer** — about to claim done-with-residue, or write
    "follow-up / next session / separate pass / deferred"? Classify the
    remaining work: a GENUINE blocker (data/decision/access you lack, or a
    distinct NEW build) → name it + what unblocks it; or stopping-short
    ("it's big" / "end of session" — cop-outs) → finish it now. The user
    outcome is the WHOLE job.
-5. **nomess** — semantic orphans, dead symlinks, untracked files, stale
+6. **nomess** — semantic orphans, dead symlinks, untracked files, stale
    gates, doc-vs-runtime drift, end-to-end smoke gap.
-6. **vizcheck** — UI/CSS/layout change? Verify the visual achieved its
+7. **cold-read** — about to ship or retire an artifact? Cold-read it as a
+   context-free future agent would: does anything dead/deprecated read as
+   live, could it be mistaken for current, is the intent legible? When
+   retiring something, tombstone-or-remove and eliminate the whole CLASS
+   (sweep every occurrence), not the instance you tripped over.
+8. **vizcheck** — UI/CSS/layout change? Verify the visual achieved its
    intent in its rendered form — read the pixels, escalate to coordinate
    readback for exact placement. Syntax checks don't substitute.
-7. **adversarial-pass** — the author can't be the only reviewer.
+9. **adversarial-pass** — the author can't be the only reviewer.
    Live-fire the user-outcome path (repeatedly for nondeterministic
    surfaces); for high-stakes work, spawn the `refuter` agent to
    REFUTE the claim, not bless it. This EARNS the .95 posterior rather
@@ -74,11 +83,11 @@ commitment to the other phase. Most work passes through both in order.
 ## Composition map
 
 ```
-DESIGN:  substrate-search → think-3x ─┬─ karsholto (lens)
+DESIGN:  substrate-search → compile-it → think-3x ─┬─ karsholto (lens)
                                       └─ adversarial-inverse (lens; mechanisms only)
                    │  build the synthesis
                    ▼
-VERIFY:  triad(.95 + root-cause + karsholto) → completer → nomess → vizcheck(UI) → adversarial-pass(→ refuter agent)
+VERIFY:  triad(.95 + root-cause + karsholto) → completer → nomess → cold-read → vizcheck(UI) → adversarial-pass(→ refuter agent)
 ```
 
 ## One-line summary
