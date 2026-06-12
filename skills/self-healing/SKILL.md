@@ -1,9 +1,9 @@
 ---
-name: self-correcting-substrate
+name: self-healing
 description: When building any monitor / health-check / audit / cron / observer, design it to ACT, not just alert. Pattern — detect → attempt recovery → log to durable telemetry → escalate ONLY on persistent failure (after N recovery attempts) or a decision that genuinely needs a human. A monitor that just posts to a human channel and hopes someone acts is wrong-pattern; a cron that reports without acting is theater — wire it to act or kill it. Trigger: about to build a health-check / monitor / audit / cron / watcher.
 ---
 
-# /self-correcting-substrate — act, don't alert
+# /self-healing — act, don't alert
 
 The default action when a thing breaks is "try to fix it," not "tell a
 human it broke." A human channel is a finite-attention sink: signal

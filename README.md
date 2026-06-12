@@ -30,7 +30,7 @@ knowledge work — see *Companion kit* below.
 | `vizcheck` | Verify any UI/visual change in its *rendered* form — read the pixels, not the code. |
 | `adversarial-pass` | Independent review before claiming done; spawn the `refuter` agent for high-stakes. |
 | `adversarial-inverse` | Before locking any value-bearing mechanism, find how it's exploited. |
-| `self-correcting-substrate` | Build monitors/crons that *act* on what they find, not just alert. |
+| `self-healing` | Build monitors/crons that *act* on what they find, not just alert. |
 | `discipline` | The conductor — fires the right gate at the right phase for high-stakes work. |
 | `grill-me` | Interrogate a plan until every branch is resolved. |
 
